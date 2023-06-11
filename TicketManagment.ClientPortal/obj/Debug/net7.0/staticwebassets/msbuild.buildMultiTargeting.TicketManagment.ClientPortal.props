@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TicketManagment.ClientPortal.props" />
+</Project>

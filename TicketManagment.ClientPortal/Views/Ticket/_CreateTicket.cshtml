@@ -1,0 +1,54 @@
+﻿<!-- Modal -->
+@model CreateTicketVM
+﻿@using Microsoft.AspNetCore.Localization
+@using TicketManagment.Application
+
+<div id="CreateTicketModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel1">@Html.Translate("CreateNewTicket")</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            </div>
+            <div class="modal-body pb-0">
+                <form id="createTicketForm">
+                    <div class="form-group">
+                        <h5>@Html.Translate("ProjectName") <span class="text-danger"></span></h5>
+                        <div class="controls ">
+                            <input type="text" class="form-control" asp-for="@Model.ProjectName">
+                            <span class="ValidationError " asp-validation-for="@Model.ProjectName"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>@Html.Translate("DepartmentName")  <span class="text-danger"></span></h5>
+                        <div class="controls">
+                            <select asp-for="@Model.DepartmentId" class="select2 form-control form-select" style="width: 100% !important;" id="departmentList">
+                                <option value="">Select Department Name </option>
+                            </select>
+                            <span class="ValidationError" asp-validation-for="@Model.DepartmentId"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>@Html.Translate("EmployeeName")  <span class="text-danger"></span></h5>
+                        <div class="controls">
+                            <select asp-for="@Model.EmployeeId" class="select2 form-control form-select" style="width: 100% !important;" id="employessList">
+                                <option value="">Select Employee Name </option>
+                            </select>
+                            <span class="ValidationError" asp-validation-for="@Model.EmployeeId"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <h5>@Html.Translate("Description") <span class="text-danger"></span></h5>
+                        <textarea class="form-control" rows="3" asp-for="@Model.Description"></textarea>
+                        <span class="ValidationError " asp-validation-for="@Model.Description"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button class="btn btn-primary text-white FormBTN" id="addTicketBtn">@Html.Translate("Submit") </button>
+                <button type="reset" class="btn btn-inverse btn waves-effect waves-light btn-outline-info FormBTN" data-bs-dismiss="modal">@Html.Translate("Cancel")</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.modal -->

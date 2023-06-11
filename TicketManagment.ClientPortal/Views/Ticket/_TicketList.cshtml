@@ -1,0 +1,26 @@
+﻿﻿@using Microsoft.AspNetCore.Localization
+@using TicketManagment.Application
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@Html.Translate("Ticketlist") </h4>
+                <button type="button" class="btn btn-info btn-rounded m-t-10 float-end text-white CardBTN" onclick="redirectToCreatCoursePage()">@Html.Translate("CreateNewTicket")</button>
+                <div class="TableResScroll">
+                    <div class="table-responsive mt-4">
+                        <table id="ticketTable" class="table table-striped border myTable">
+                            <thead>
+                                <tr>
+                                    <th>@Html.Translate("ProjectName") </th>
+                                    <th>@Html.Translate("DepartmentName") </th>
+                                    <th>@Html.Translate("Description") </th>
+                                    <th>@Html.Translate("RequestedDate") </th>
+                                 </tr>
+                            </thead>
+                         </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

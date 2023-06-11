@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "99es9MH1HkesCCepFp+ZSY5fW7M6yktBMIHssAFp76hrxM92zi/R9mkstkWpG+x+bIs70zN3yoyY85Q60SUUUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\owner\\Downloads\\TicketManagment\\TicketManagment\\TicketManagment.Domain\\TicketManagment.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\owner\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\7.0.5\\microsoft.extensions.localization.abstractions.7.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
